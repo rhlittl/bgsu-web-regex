@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="eng">
+
+    <head>
+
+        <title>Littlejohn, Robert CS 3140</title>
+        <meta charset="utf-8"/>
+        <meta name="title" content="Lab 4"/>
+        <meta name="author" content="Robert Littlejohn"/>
+        <meta name="description" content=""/>
+        <meta name="keywords" content="Lab 4 CS 3140"/>
+
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+
+    </head>
+
+    <body>
+        <div id="pageContent">
+            <div id="heading">
+                <h1>Robert Littlejohn, Lab#5</h1>
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="page1.html">Page 1</a></li>
+                    <li><a href="page2.html">Page 2</a></li>
+                    <li class="active"><a href="page3.html">Page 3</a></li>
+                    <li><a href="page4.html">Page 4</a></li>
+                </ul>
+            </nav>
+            <div id="leftContent">
+            
+                <script type="text/javascript">
+                <!--
+                    var paragraph = "As Moor states, the technology involving computers is rapidly progressing. I agree with Moor that it seems that the best way to proceed with advancing technology is to set up ground rules before allowing certain technologies to become more advanced. I agree with this simply because of a television show called Chuck. It showed me that even though some technologies can have good intentions, once it becomes a mainstream or black marketable technology, it can lead to dire consequences such as downloading information into the brain through a computer program.";
+                    
+                    var pArray = new Array();
+                    var uniqueWords = new Array();
+                    
+                    
+                    
+                    document.write("<h2>Original Text:</h2>");
+                    document.write(paragraph);
+                    
+                    pArray = paragraph.split(" ");
+                    
+                    for(var i = 0; i < pArray.length; i++)
+                    {
+                        var x = 0;
+                        if(i == 0)
+                        {
+                            uniqueWords[i] = pArray[i]
+                        }
+                        else
+                        {
+                            for(var j = 0; j < uniqueWords.length; j++)
+                            {
+                                if(pArray[i] == uniqueWords[j])
+                                {
+                                    x = 1;
+                                }
+                            }
+                            if(x == 0)
+                            {
+                                uniqueWords.push(pArray[i]);
+                            }
+                        }
+                    }
+                    uniqueWords.sort();
+                    
+                    
+                    
+                    document.write("<br />");
+                    document.write("<h2>Unique Words:</h2>");
+                    document.write(uniqueWords.join("-"));
+                
+                -->
+                </script>
+            </div>
+            <div id="rightContent">
+                <img src="images/ohio.jpg" alt="Ohio_Centennial_Barn" class="centerImage"/>
+                <p>Ohio Barn!</p>
+                <p>There is a field.</p>
+                <p>The barn is white.</p>
+                <p>It has some writing on it.</p>
+                
+            </div>
+            <div id="footer">
+                <p>Copywright&copy; 2013 - Robert Littlejohn</p>
+            </div>
+        </div>
+    </body>
+
+</html>

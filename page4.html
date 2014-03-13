@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html lang="eng">
+
+    <head>
+
+        <title>Littlejohn, Robert CS 3140</title>
+        <meta charset="utf-8"/>
+        <meta name="title" content="Lab 4"/>
+        <meta name="author" content="Robert Littlejohn"/>
+        <meta name="description" content=""/>
+        <meta name="keywords" content="Lab 4 CS 3140"/>
+
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+
+    </head>
+
+    <body>
+        <div id="pageContent">
+            <div id="heading">
+                <h1>Robert Littlejohn, Lab#5</h1>
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="page1.html">Page 1</a></li>
+                    <li><a href="page2.html">Page 2</a></li>
+                    <li><a href="page3.html">Page 3</a></li>
+                    <li class="active"><a href="page4.html">Page 4</a></li>
+                </ul>
+            </nav>
+            <div id="leftContent">
+                <script type="text/javascript">
+                <!--
+                    var regex1 = /\(\d{3}\)\d{3}\-\d{4}/
+                    var regex2 = /\d{3}\-\d{3}\-\d{4}/;
+                    var regex3 = /\d{3}\s\d{3}\s\d{4}/;
+                    
+                    var regex4 = /\d{5}/;
+                    var regex5 = /\d{5}?\-\d{4}/;
+                    
+                    var regex6 = /[A-Za-z0-9]+\@[A-Za-z0-9]+\.[edu]*/
+                    var regex7 = /[A-Za-z0-9]+\.[A-Za-z0-9]+\@[A-Za-z0-9]+\.[edu]*/
+                    var regex8 = /[A-Za-z0-9]+\.[A-Za-z0-9]+\+[A-Za-z0-9]+\@[A-Za-z0-9]+\.[edu]*/
+                    var regex9 = /[A-Za-z0-9]+\+[A-Za-z0-9]+\@[A-Za-z0-9]+\.[edu]*/
+                    
+                    var testStrings = new Array();
+                    
+                    testStrings[0] = "(419)668-8525"
+                    testStrings[1] = "(602)109-6767"
+                    testStrings[2] = "asdf"
+                    testStrings[3] = "45trsdgf"
+                    testStrings[4] = "xxc.66"
+                    testStrings[5] = "4-4-4-4-4"
+                    testStrings[6] = "45t45t4t"
+                    testStrings[7] = "888-999-1212"
+                    testStrings[8] = "333-444-5555"
+                    testStrings[9] = "1-23ed33"
+                    testStrings[10] = "90-90-90-8"
+                    testStrings[11] = "45dfgdfg"
+                    testStrings[12] = "34ggg"
+                    testStrings[13] = "4+44"
+                    testStrings[14] = "234 234 9876"
+                    testStrings[15] = "987 765 6543"
+                    testStrings[16] = "tertewrt"
+                    testStrings[17] = "fd44f43"
+                    testStrings[18] = "90-90-8"
+                    testStrings[19] = "43f3ff33"
+                    testStrings[20] = "12rrrr"
+                    testStrings[21] = "43202"
+                    testStrings[22] = "43402"
+                    testStrings[23] = "324v"
+                    testStrings[24] = "rtytry"
+                    testStrings[25] = "ohio"
+                    testStrings[26] = "567-567"
+                    testStrings[27] = "88-8888"
+                    testStrings[28] = "34567-3456"
+                    testStrings[29] = "12345-1234"
+                    testStrings[30] = "Happy Birthday"
+                    testStrings[31] = "Tennesseeeee"
+                    testStrings[32] = "345t345"
+                    testStrings[33] = "890-089"
+                    testStrings[34] = "333-999-090"
+                    testStrings[35] = "big.scwewy.wabbit"
+                    testStrings[36] = "small.scwewy.wabbit"
+                    testStrings[37] = "rhlittl@bgsu.edu"
+                    testStrings[38] = "biggerpooh@bgsu.edu"
+                    testStrings[39] = "890-90-98"
+                    testStrings[40] = "888-88888"
+                    testStrings[41] = "woop"
+                    testStrings[42] = "rhli.ttl@bgsu.edu"
+                    testStrings[43] = "rh.littl@bgsu.edu"
+                    testStrings[44] = "aplle"
+                    testStrings[45] = "banana"
+                    testStrings[46] = "pie"
+                    testStrings[47] = "cake"
+                    testStrings[48] = "soap.1"
+                    testStrings[49] = "rhli.ttl+robert@bgsu.edu"
+                    testStrings[50] = "im.so+tired@bgsu.edu"
+                    testStrings[51] = "am"
+                    testStrings[52] = "Ial,mos"
+                    testStrings[53] = "done@pple"
+                    testStrings[54] = "@pplebees"
+                    testStrings[55] = "honeytrees"
+                    testStrings[56] = "robert+littlejohn@bgsu.edu"
+                    testStrings[57] = "Someone+else@bgsu.edu"
+                    testStrings[58] = "9879sdf"
+                    testStrings[59] = "kjsdhfsjy"
+                    testStrings[60] = "kjsdhf@"
+                    testStrings[61] = "lkjdfh0998089"
+                    testStrings[62] = "OPENINGUPWOO"
+                    
+                    var result;
+                    
+                    document.write("<table>",
+                                        "<tr>",
+                                            "<th>Data</th>",
+                                            "<th>Pass or Fail</th>",
+                                        "</tr>");
+                    
+                    for(var i = 0; i < 63; i++)
+                    {
+                        if(i < 7)
+                        {
+                            result = testStrings[i].match(regex1);
+                            document.write("<td>" + testStrings[i] + "</td>");
+                            if(result)
+                            {
+                                document.write("<td>Pass</td>");
+                                document.write("</tr>");
+                            }
+                            else
+                            {
+                                document.write("<td>Fail</td>");
+                                document.write("</tr>");
+                            }
+                        }
+                        else if(i > 6 && i < 14)
+                        {
+                            result = testStrings[i].match(regex2);
+                            document.write("<td>" + testStrings[i] + "</td>");
+                            if(result)
+                            {
+                                document.write("<td>Pass</td>");
+                                document.write("</tr>");
+                            }
+                            else
+                            {
+                                document.write("<td>Fail</td>");
+                                document.write("</tr>");
+                            }
+                        }
+                        else if(i > 13 && i < 21)
+                        {
+                            result = testStrings[i].match(regex3);
+                            document.write("<td>" + testStrings[i] + "</td>");
+                            if(result)
+                            {
+                                document.write("<td>Pass</td>");
+                                document.write("</tr>");
+                            }
+                            else
+                            {
+                                document.write("<td>Fail</td>");
+                                document.write("</tr>");
+                            }
+                        }
+                        else if(i > 20 && i < 28)
+                        {
+                            result = testStrings[i].match(regex4);
+                            document.write("<td>" + testStrings[i] + "</td>");
+                            if(result)
+                            {
+                                document.write("<td>Pass</td>");
+                                document.write("</tr>");
+                            }
+                            else
+                            {
+                                document.write("<td>Fail</td>");
+                                document.write("</tr>");
+                            }
+                        }
+                        else if(i > 27 && i < 35)
+                        {
+                            result = testStrings[i].match(regex5);
+                            document.write("<td>" + testStrings[i] + "</td>");
+                            if(result)
+                            {
+                                document.write("<td>Pass</td>");
+                                document.write("</tr>");
+                            }
+                            else
+                            {
+                                document.write("<td>Fail</td>");
+                                document.write("</tr>");
+                            }
+                        }
+                        else if(i > 34 && i < 42)
+                        {
+                            result = testStrings[i].match(regex6);
+                            document.write("<td>" + testStrings[i] + "</td>");
+                            if(result)
+                            {
+                                document.write("<td>Pass</td>");
+                                document.write("</tr>");
+                            }
+                            else
+                            {
+                                document.write("<td>Fail</td>");
+                                document.write("</tr>");
+                            }
+                        }
+                        else if(i > 41 && i < 49)
+                        {
+                            result = testStrings[i].match(regex7);
+                            document.write("<td>" + testStrings[i] + "</td>");
+                            if(result)
+                            {
+                                document.write("<td>Pass</td>");
+                                document.write("</tr>");
+                            }
+                            else
+                            {
+                                document.write("<td>Fail</td>");
+                                document.write("</tr>");
+                            }
+                        }
+                        else if(i > 48 && i < 56)
+                        {
+                            result = testStrings[i].match(regex8);
+                            document.write("<td>" + testStrings[i] + "</td>");
+                            if(result)
+                            {
+                                document.write("<td>Pass</td>");
+                                document.write("</tr>");
+                            }
+                            else
+                            {
+                                document.write("<td>Fail</td>");
+                                document.write("</tr>");
+                            }
+                        }
+                        else if(i > 55 && i < 63)
+                        {
+                            result = testStrings[i].match(regex9);
+                            document.write("<td>" + testStrings[i] + "</td>");
+                            if(result)
+                            {
+                                document.write("<td>Pass</td>");
+                                document.write("</tr>");
+                            }
+                            else
+                            {
+                                document.write("<td>Fail</td>");
+                                document.write("</tr>");
+                            }
+                        }
+                    }
+                    
+                    document.write("</table>");
+                
+                -->
+                </script>
+            </div>
+            <div id="rightContent">
+                <img src="images/ohio.jpg" alt="Ohio_Centennial_Barn" class="centerImage"/>
+                <p>Ohio Barn!</p>
+                <p>There is a field.</p>
+                <p>The barn is white.</p>
+                <p>It has some writing on it.</p>
+                
+            </div>
+            <div id="footer">
+                <p>Copywright&copy; 2013 - Robert Littlejohn</p>
+            </div>
+        </div>
+    </body>
+
+</html>
